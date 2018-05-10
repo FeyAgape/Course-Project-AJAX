@@ -15,11 +15,19 @@
         	headers: {
         		Authorization:`Client-ID faa6734d78701fc28e60f034c34fe2e3ec655c16e50dfc8a0b77c2bd3eb34f6e`
         	}
-        }).done(addImage);
+        }).done(addImage)
+        //.fail(function (err){
+           //requestError(err, 'image');
+        //})
+        ;
 
          $.ajax({
-        	url: `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedForText}&api-key=f1c69a7b01c34968b7e4da055884e63b`
-        }).done(addArticles);
+        	url: `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedForText}&api-key=f1c69a7b01c34968b7e4da055884e63b`
+        }).done(addArticles)
+         //.fail(function (err){
+           // requestError(err, 'articles');
+        //})
+        ;
 
     });
 
