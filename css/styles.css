@@ -34,6 +34,14 @@ body {
     text-align: center;
 }
 
+.masthead h3 {
+    color: #ffffff;
+    font-weight: normal;
+    margin: 0;
+    margin: 1.2em 0;
+    text-align: center;
+}
+
 /*** Search Form ***/
 #search-form {
     display: flex;
@@ -66,6 +74,54 @@ body {
 /*** Response Container ***/
 #response-container {
     margin-top: 2em;
+}
+
+#response-container ul {
+  padding: 5px 0;
+}
+
+#response-container ul::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#response-container li {
+    float: left;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 0px 15px;
+    margin: 1% 0.6%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#response-container h2 {
+  color: #166771;
+}
+
+#response-container p {
+  font-size: 0.7em;
+  color: #000;
+}
+
+#response-container button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  background-color: #e91e63ad;
+  text-align: center;
+  cursor: pointer;
+  width: 40%;
+}
+
+#response-container a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#response-container button:hover {
+  background-color: #e91e63;
 }
 
 /*** Image Styline ***/

@@ -26,7 +26,7 @@
         const firstImage = data.results[0];
 
         responseContainer.insertAdjacentHTML('afterbegin', `<figure>
-                <img src="${firstImage.urls.small}" alt="${searchedForText}">
+                <img src="${firstImage.urls.regular}" alt="${searchedForText}">
                 <figcaption>${searchedForText} by ${firstImage.user.name}</figcaption>
             </figure>`
         );
@@ -35,9 +35,10 @@
     function addArticles() {
         const data = JSON.parse(this.responseText);
         const articlesInHTML = data.response.docs.map(article => `<li>
-                <h2><a href="${article.web_url}">${article.headline.main}</a><h2>
+                <h2>${article.headline.main}<h2>
                 <p>${article.snippet}</p>
                 <p>Word Count: ${article.word_count}<br> Type of Material: ${article.type_of_material}<br>Source: ${article.source}</p>
+                <p><button class="button"><a href="${article.web_url}">View Article</a></button></p>
             </li>`
         );
 
